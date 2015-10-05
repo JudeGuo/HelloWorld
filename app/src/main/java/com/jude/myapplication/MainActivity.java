@@ -3,6 +3,7 @@ package com.jude.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,12 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     private Button sendAgainButton;
     public static final String MESSAGE = "message";
+    public static final String TAG = "Jude";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.i(TAG, "onCreate method");
         sendAgainButton = (Button)
                 findViewById(R.id.btn_send_again);
         sendAgainButton.setOnClickListener ( new View.OnClickListener(){
